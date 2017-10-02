@@ -1,16 +1,16 @@
-let Meetup = require ('../models/meetup')
+let Events = require ('../models/event')
 
 
 module.exports.create = (req, res) =>{
-let meetup = new Meetup(req.body);
-meetup.save((err,result)=>{
+let event = new Event(req.body);
+event.save((err,result)=>{
   res.json(result);
 });
   console.log(req.body);
 }
 
 module.exports.list = (req, res) =>{
-  Meetup.find({}, (err, results)=>{
+  Events.find({}, (err, results)=>{
     res.json(results);
   })
 }

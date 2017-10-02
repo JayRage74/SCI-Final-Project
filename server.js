@@ -2,7 +2,7 @@ let express = require ('express');
 let app = express();
 let bodyParser = require('body-parser');
 let mongoose = require ('mongoose');
-let meetupsController = require('./controllers/meetups-controller');
+let eventsController = require('./controllers/events-controller');
 
 mongoose.connect('mongodb://localhost:27017/SCI-Final-Project');
 
@@ -14,8 +14,8 @@ app.get ('/' , (req, res) => {
 
 app.use('/ngApp', express.static(__dirname + '/ngApp'));
 
-app.get('/api/meetups', meetupsController.list);
-app.post('/api/meetups', meetupsController.create);
+app.get('/api/meetups', eventsController.list);
+app.post('/api/meetups',eventsController.create);
 
 
 let port = 3333;

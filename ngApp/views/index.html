@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html ng-app= "meetupsApp">
+<html ng-app= "eventsApp">
   <head>
     <meta charset="utf-8">
     <title>Hello</title>
   </head>
   <body>
-    <div ng-controller= "meetupsController">
-    <h2>There are {{meetups.length}} meetups</h2>
+    <div ng-controller= "eventsController">
+    <h2>There are {{events.length}} events</h2>
     <ul>
-      <li ng-repeat="meetup in meetups">{{meetup.name}}</li>
+      <li ng-repeat="event in events">{event.name}}</li>
     </ul>
 
-    <form  ng-submit="addMeetup()">
-      <input ng-model="meetupName">
+    <form  ng-submit="addEvent()">
+      <input ng-model="eventName">
       <button type="submit">Add</button>
     </form>
   </div>

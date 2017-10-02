@@ -2,7 +2,7 @@
 // .controller("meetupsController", ($scope)
 app.controller('meetupsController', ['$scope', '$resource',
 ($scope, $resource) =>{
-  let Meetup = $resource('/api/meetups');
+  let Event = $resource('/api/meetups');
   // $scope.meetupsGreeting = "Hello from controller";
   // $scope.meetups = [
   //   {name:"Meetup 1"},
@@ -10,16 +10,16 @@ app.controller('meetupsController', ['$scope', '$resource',
   //   {name:"Meetup 3"}
   // ];
 
-  Meetup.query((results)=>{
+  Event.query((results)=>{
     $scope.meetups = results;
   });
-  
+
   $scope.addMeetup = () =>{
-    let meetup = new Meetup();
+    let meetup = new Event();
     meetup.name = $scope.meetupName;
     meetup.$save((result)=>{
-      $scope.meetups.push(result);
-      $scope.meetupname = '';
+      $scope.event.push(result);
+      $scope.eventname = '';
     });
     // $scope.meetups.push({name:$scope.meetupName});
     // $scope.meetupName = '';
