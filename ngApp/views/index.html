@@ -8,7 +8,7 @@
     <div ng-controller= "eventsController">
     <h2>There are {{events.length}} events</h2>
     <ul>
-      <li ng-repeat="event in events">{event.name}}</li>
+      <li ng-repeat="event in events">{{event.name}}</li>
     </ul>
 
     <form  ng-submit="addEvent()">
@@ -20,7 +20,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-resource.js"></script>
     <script type="text/javascript" src="/ngApp/app.js"></script>
-    <script type="text/javascript" src="/ngApp/controllers/meetups-controller.js"></script>
+    <script type="text/javascript" src="/ngApp/controllers/events-controller.js"></script>
 
   </body>
 </html>

@@ -14,8 +14,8 @@ app.get ('/' , (req, res) => {
 
 app.use('/ngApp', express.static(__dirname + '/ngApp'));
 
-app.get('/api/meetups', eventsController.list);
-app.post('/api/meetups',eventsController.create);
+app.get('/api/events', eventsController.list);
+app.post('/api/events', eventsController.create);
 
 
 let port = 3333;

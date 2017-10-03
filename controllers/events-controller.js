@@ -1,4 +1,4 @@
-let Events = require ('../models/event')
+let Event = require ('../models/event')
 
 
 module.exports.create = (req, res) =>{
@@ -10,7 +10,7 @@ event.save((err,result)=>{
 }
 
 module.exports.list = (req, res) =>{
-  Events.find({}, (err, results)=>{
+  Event.find({}, (err, results)=>{
     res.json(results);
   })
 }
