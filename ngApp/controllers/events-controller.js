@@ -14,10 +14,11 @@ app.controller('eventsController', ['$scope', '$resource',
     $scope.events = results;
   });
 
+
   $scope.addEvent = () =>{
     let event = new Event();
-    event.name = $scope.eventName;
-    event.$save((result)=>{
+  event.name = $scope.eventName;
+  event.$save((result)=>{
       $scope.events.push(result);
       $scope.eventname = '';
     });
