@@ -1,8 +1,8 @@
 // angular.module("meetupsApp", [])
 // .controller("meetupsController", ($scope)
-app.controller('meetupsController', ['$scope', '$resource',
+app.controller('eventsController', ['$scope', '$resource',
 ($scope, $resource) =>{
-  let Event = $resource('/api/meetups');
+  let Event = $resource('/api/events');
   // $scope.meetupsGreeting = "Hello from controller";
   // $scope.meetups = [
   //   {name:"Meetup 1"},
@@ -14,10 +14,10 @@ app.controller('meetupsController', ['$scope', '$resource',
     $scope.meetups = results;
   });
 
-  $scope.addMeetup = () =>{
-    let meetup = new Event();
-    meetup.name = $scope.meetupName;
-    meetup.$save((result)=>{
+  $scope.addEvents = () =>{
+    let event = new Event();
+    event.name = $scope.eventName;
+  event.$save((result)=>{
       $scope.event.push(result);
       $scope.eventname = '';
     });
