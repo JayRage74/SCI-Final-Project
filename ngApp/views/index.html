@@ -9,7 +9,7 @@
     <div ng-controller= "eventsController">
     <h2>There are {{events.length}} events</h2>
     <ul>
-  <li ng-repeat="event in events">{{event.name}}</li>
+   <a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.name}}</a>
     </ul>
 
     <form  ng-submit="addEvent()">
