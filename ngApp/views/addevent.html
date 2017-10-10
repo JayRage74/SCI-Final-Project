@@ -1,12 +1,11 @@
+<div ng-controller= "eventsController">
+<h2>There are {{events.length}} events</h2>
+<ul>
+<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.name}}</a>
+</ul>
 
-  <div ng-controller= "eventsController">
-  <h2>There are {{events.length}} events</h2>
-  <ul>
-    <li ng-repeat="event in events">{{event.name}}</li>
-  </ul>
-
-  <form  ng-submit="addEvent()">
-    <input ng-model="eventName">
-    <button type="submit">Add</button>
-  </form>
+<form  ng-submit="addEvent()">
+  <input ng-model="eventName">
+  <button type="submit" class="btn btn-outline-primary">Add</button>
+</form>
 </div>

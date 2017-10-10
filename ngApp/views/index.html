@@ -3,18 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
 
-  <!-- <body>
-    <div ng-controller= "eventsController">
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Navbar</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+    <!-- <div ng-controller= "eventsController">
     <h2>There are {{events.length}} events</h2>
     <ul>
-      <li ng-repeat="event in events">{{event.name}}</li>
+   <a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.name}}</a>
     </ul>
 
     <form  ng-submit="addEvent()">
       <input ng-model="eventName">
-      <button type="submit">Add</button>
+      <button type="submit" class="btn btn-outline-primary">Add</button>
     </form>
   </div> -->
 
