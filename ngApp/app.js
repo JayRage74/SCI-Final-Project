@@ -1,4 +1,4 @@
-let app = angular.module("eventsApp",['ngResource','ui.router']);
+let app = angular.module("eventsApp", ['ngResource', 'ui.router']);
 
 app.config(($stateProvider) => {
   $stateProvider
@@ -23,6 +23,5 @@ app.config(($stateProvider) => {
       templateUrl: '/ngApp/views/maps.html'
     })
 
-  // $routerProvider.otherwise('/');
-  // $locationProvider.html5Mode(true);
+
 });
