@@ -24,6 +24,29 @@ app.controller('eventsController', ['$scope', '$resource',
           });
           // $scope.meetups.push({name:$scope.meetupName});
           // $scope.meetupName = '';
-        }
 
-        }]);
+        }}]);
+
+
+    app.controller('authController', ['$scope', 'postService',
+      ($scope, postService) => {
+      $scope.user = {
+        username: '',
+        password: ''
+      };
+      $scope.error_message = '';
+
+      postService.getAll().success((data) => {
+        $scope.posts = data;
+      });
+
+      $scope.login = () => {
+        //placeholder until authentication is implemented
+        $scope.error_message = 'login request for ' + $scope.user.username;
+      };
+
+      $scope.register = () => {
+        //placeholder until authentication is implemented
+        $scope.error_message = 'registeration request for ' + $scope.user.username;
+      };
+    }]);

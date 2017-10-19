@@ -22,6 +22,17 @@ app.config(($stateProvider) => {
       url: '/maps',
       templateUrl: '/ngApp/views/maps.html'
     })
+    .state('login', {
+      url:'/login',
+      templateUrl: '/ngApp/views/login.html',
+      controller: 'authController'
+    })
+    //the signup display
+    .state('register', {
+      url: '/register',
+      templateUrl: '/ngApp/views/register.html',
+      controller: 'authController'
+    });
 
 
 });

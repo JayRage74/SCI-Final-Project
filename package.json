@@ -21,7 +21,9 @@
     "angularjs-social-login": "^2.6.1",
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
+    "fullcalendar": "^3.6.1",
     "mongoose": "^4.11.13",
+    "ng-google-signin": "^0.1.0",
     "nodemon": "^1.12.1"
   }
 }
