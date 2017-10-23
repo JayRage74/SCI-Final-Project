@@ -1,4 +1,14 @@
-let app = angular.module("eventsApp", ['ngResource', 'ui.router']);
+let app = angular.module("eventsApp", ['ngResource', 'ui.router']).run(function($http, $rootScope){
+  $rootScope.authenticated = false;
+  $rootScope.current_user = '';
+
+  $rootScope.signout = function(){
+    $http.get('auth/signout');
+    $rootScope.authenticated = false;
+    $rootScope.current_user = '';
+  };
+});
+
 
 app.config(($stateProvider) => {
   $stateProvider
