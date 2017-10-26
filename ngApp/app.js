@@ -1,4 +1,14 @@
-let app = angular.module("eventsApp",['ngResource','ui.router']);
+let app = angular.module("eventsApp", ['ngResource', 'ui.router']).run(function($http, $rootScope){
+  $rootScope.authenticated = false;
+  $rootScope.current_user = '';
+
+  $rootScope.signout = function(){
+    $http.get('auth/signout');
+    $rootScope.authenticated = false;
+    $rootScope.current_user = '';
+  };
+});
+
 
 app.config(($stateProvider) => {
   $stateProvider
@@ -22,11 +32,21 @@ app.config(($stateProvider) => {
       url: '/maps',
       templateUrl: '/ngApp/views/maps.html'
     })
-    .state('calendar', {
-      url: '/calendar',
-      templateUrl: '/ngApp/views/maps.html',
-      controller:'demoController'  
+    .state('login', {
+      url:'/login',
+      templateUrl: '/ngApp/views/login.html',
+      controller: 'authController'
     })
-  // $routerProvider.otherwise('/');
-  // $locationProvider.html5Mode(true);
+    //the signup display
+    .state('register', {
+      url: '/register',
+      templateUrl: '/ngApp/views/register.html',
+      controller: 'authController'
+    })
+    .state('login', {
+      url:'/calendar',
+      templateUrl: '/ngApp/views/calendar.html',
+      controller: 'demoController'
+    })
+
 });
