@@ -22,7 +22,11 @@ app.config(($stateProvider) => {
       url: '/maps',
       templateUrl: '/ngApp/views/maps.html'
     })
-
+    .state('calendar', {
+      url: '/calendar',
+      templateUrl: '/ngApp/views/maps.html',
+      controller:'demoController'  
+    })
   // $routerProvider.otherwise('/');
   // $locationProvider.html5Mode(true);
 });
