@@ -18,9 +18,14 @@ app.controller('eventsController', ['$scope', '$resource',
         $scope.addEvent = () => {
           let event = new Event();
           event.name = $scope.eventName;
+          event.location = $scope.eventLocation;
+          event.time = $scope.eventTime;
           event.$save((result) => {
             $scope.events.push(result);
             $scope.eventname = '';
+            $scope.eventlocation = '';
+            $scope.eventtime = '';
+
           });
           // $scope.meetups.push({name:$scope.meetupName});
           // $scope.meetupName = '';
