@@ -2,10 +2,16 @@
 <h2>There are {{events.length}} events</h2>
 <ul>
 <a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.name}}</a>
+<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.location}}</a>
+<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.time}}</a>
+
 </ul>
 
+
 <form  ng-submit="addEvent()">
-  <input ng-model="eventName">
+  <input ng-model="eventName" required>
+  <input ng-model="eventLocation" required>
+  <input ng-model="eventTime" required>
   <button type="submit" class="btn btn-outline-primary">Add</button>
 </form>
 </div>
