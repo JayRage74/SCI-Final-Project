@@ -18,13 +18,20 @@
   },
   "homepage": "https://github.com/JayRage74/SCI-Final-Project#readme",
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.1",
+    "angular-calendar": "^0.21.3",
     "angularjs-social-login": "^2.6.1",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0-beta.2",
     "express": "^4.15.5",
     "fullcalendar": "^3.6.1",
+    "google-maps-api-loader": "^1.0.0",
     "lodash": "^4.17.4",
     "mongoose": "^4.11.13",
     "ng-google-signin": "^0.1.0",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
   }
 }

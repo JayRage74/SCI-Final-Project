@@ -42,7 +42,11 @@ app.config(($stateProvider) => {
       url: '/register',
       templateUrl: '/ngApp/views/register.html',
       controller: 'authController'
-    });
-
+    })
+    .state('login', {
+      url:'/calendar',
+      templateUrl: '/ngApp/views/calendar.html',
+      controller: 'demoController'
+    })
 
 });
