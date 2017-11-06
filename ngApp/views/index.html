@@ -7,37 +7,33 @@
   </head>
 <body>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">#FiveAmigos</a>
-      </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a ui-sref="home">Home <span class="sr-only">(current)</span></a></li>
-          <li class="active"><a ui-sref="contact">Contact <span class="sr-only">(current)</span></a></li>
-          <li class="active"><a ui-sref="addEvent">Add Event <span class="sr-only">(current)</span></a></li>
-          <li class="active"><a ui-sref="maps">Map <span class="sr-only">(current)</span></a></li>
-          <li class="active"><a ui-sref="calendar">Calendar <span class="sr-only">(current)</span></a></li>
-        </ul>
-        <form class="navbar-form navbar-left">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">#FiveAmigos</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" ui-sref="home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" ui-sref="contact">Contact</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" ui-sref="addEvent">Event Listings</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link " ui-sref="maps">Map</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" ui-sref="calendar">Calendar</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <!-- <div ng-controller= "eventsController">
     <h2>There are {{events.length}} events</h2>
     <ul>
@@ -63,6 +59,8 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-resource.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
   <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
   <!-- <script type="text/javascript" src="/app/app.js"></script> -->
