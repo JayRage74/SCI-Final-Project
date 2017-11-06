@@ -18,51 +18,16 @@ app.controller('eventsController', ['$scope', '$resource',
         $scope.addEvent = () => {
           let event = new Event();
           event.name = $scope.eventName;
+          event.location = $scope.eventLocation;
+          event.time = $scope.eventTime;
           event.$save((result) => {
             $scope.events.push(result);
             $scope.eventname = '';
+            $scope.eventlocation = '';
+            $scope.eventtime = '';
+
           });
           // $scope.meetups.push({name:$scope.meetupName});
           // $scope.meetupName = '';
 
         }}]);
-
-
-    app.controller('authController', function($scope, $http, $rootScope, $location){
-      $scope.user = {
-        username: '',
-        password: ''
-      };
-      $scope.error_message = '';
-
-      // postService.getAll().success((data) => {
-      //   $scope.posts = data;
-      // });
-
-      $scope.login = function(){
-    $http.post('/auth/login', $scope.user).success(function(data){
-      if(data.state == 'success'){
-        $rootScope.authenticated = true;
-        $rootScope.current_user = data.user.username;
-        $location.path('/');
-      }
-      else{
-        $scope.error_message = data.message;
-      }
-    });
-  };
-
-
-      $scope.register = function(){
-    $http.post('/auth/signup', $scope.user).success(function(data){
-      if(data.state == 'success'){
-        $rootScope.authenticated = true;
-        $rootScope.current_user = data.user.username;
-        $location.path('/');
-      }
-      else{
-        $scope.error_message = data.message;
-      }
-    });
-  };
-});
