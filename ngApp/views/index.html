@@ -1,82 +1,69 @@
 <!DOCTYPE html>
-<html ng-app="eventsApp">
+<html ng-app= "eventsApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Welcome</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" ui-sref="home">Home</a>
+          <a class="nav-link" ui-sref="home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" ui-sref="contact">Contact</a>
+          <a class="nav-link" ui-sref="contact">Contact</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" ui-sref="addEvent">Add Event</a>
+          <a class="nav-link " ui-sref="about">About</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" ui-sref="maps">Maps</a>
+          <a class="nav-link " ui-sref="addEvent">Add Event</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" ui-sref="calendar">calendar</a>
+          <a class="nav-link " ui-sref="maps">Maps</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
-  <!-- <div ng-controller= "eventsController">
+
+  <!--  <div ng-controller= "eventsController">
     <h2>There are {{events.length}} events</h2>
     <ul>
    <a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.name}}</a>
-    </ul>
+ </ul>-->
 
-    <form  ng-submit="addEvent()">
+  <!--  <form  ng-submit="addEvent()">
       <input ng-model="eventName">
       <button type="submit" class="btn btn-outline-primary">Add</button>
     </form>
   </div> -->
 
-
-<!--  <a ui-sref="home">Home</a>
+  <!-- <a ui-sref="home">Home</a>
   <a ui-sref="contact">Contact</a>
   <a ui-sref="about">About</a>
   <a ui-sref="addEvent">Add Event</a>
-  <a ui-sref="maps">Maps</a>
-   <a ui-sref="calendar">calendar</a>-->
-
+  <a ui-sref="maps">Maps</a> -->
   <div ui-view></div>
 
 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-resource.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-resource.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.js"></script>
 
+    <!-- <script type="text/javascript" src="/app/app.js"></script> -->
+    <script type="text/javascript" src="/ngApp/app.js"></script>
+    <script type="text/javascript" src="/ngApp/controllers/controllers.js"></script>
 
-
-
-
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-resource.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
-  <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-  <!-- <script type="text/javascript" src="/app/app.js"></script> -->
-  <script type="text/javascript" src="/ngApp/app.js"></script>
-  <script type="text/javascript" src="/ngApp/controllers/controllers.js"></script>
-
-</body>
-
+  </body>
 </html>
