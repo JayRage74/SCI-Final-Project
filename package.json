@@ -23,7 +23,6 @@
     "angularjs-social-login": "^2.6.1",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
-    "bootstrap": "^4.0.0-beta.2",
     "express": "^4.15.5",
     "fullcalendar": "^3.6.1",
     "google-maps-api-loader": "^1.0.0",
