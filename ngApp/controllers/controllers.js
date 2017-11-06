@@ -26,10 +26,6 @@ app.controller('eventsController', ['$scope', '$resource',
             $scope.eventlocation = '';
             $scope.eventtime = '';
 
-          });
-          // $scope.meetups.push({name:$scope.meetupName});
-          // $scope.meetupName = '';
-
-          }
+      });
 
         }}]);

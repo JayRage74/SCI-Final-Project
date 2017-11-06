@@ -3,7 +3,6 @@ let app = express();
 let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 let eventsController = require('./controllers/events-controller');
-// let passport = require('passport');
 
 
 mongoose.connect('mongodb://localhost:27017/SCI-Final-Project');
