@@ -1,9 +1,7 @@
 <div ng-controller= "eventsController">
 <h2>There are {{events.length}} events</h2>
 <ul>
-<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.name}}</a>
-<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.location}}</a>
-<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.time}}</a>
+<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.name}} {{event.location}} {{event.time}}</a>
 
 </ul>
 
