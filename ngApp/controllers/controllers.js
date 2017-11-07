@@ -27,5 +27,10 @@ app.controller('eventsController', ['$scope', '$resource',
             $scope.eventtime = '';
 
       });
+      // $scope.DeleteEvent = function (event) {
+      //          var _index = $scope.Event.indexOf(event);
+      //          $scope.Event.splice(_index, 1);
+      //      }
+      //
 
         }}]);
