@@ -1,6 +1,5 @@
-let app = angular.module("eventsApp", ['ngResource', 'ui.router']);
-
-
+let app = angular.module("eventsApp", ['ngResource', 'ui.router'])
+    
 app.config(($stateProvider) => {
   $stateProvider
     .state('home', {
@@ -25,4 +24,5 @@ app.config(($stateProvider) => {
       controller: 'demoController'
     })
 
+});
 });

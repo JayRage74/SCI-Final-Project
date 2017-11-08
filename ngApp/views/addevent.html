@@ -1,15 +1,20 @@
 <div ng-controller= "eventsController">
 <h2>There are {{events.length}} events</h2>
 <ul>
-<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">Name{{event.name}} {{event.location}} {{event.time}}</a>
-
+<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">Event: {{event.name}} | Location: {{event.location}} | Date: {{event.time}}</a>
+<!-- <a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.location}}</a>
+<a ng-repeat="event in events" class="list-group-item list-group-item-action list-group-item-success">{{event.time}}</a>
+<button href="#" ng-click="DeleteEvent">Delete</a> -->
 </ul>
 
 
 <form  ng-submit="addEvent()">
-  <input ng-model="eventName" required>
-  <input ng-model="eventLocation" required>
-  <input ng-model="eventTime" required>
+  <input ng-model="eventName" placeholder="Event">
+  <input ng-model="eventLocation" placeholder="Location">
+  <input ng-model="eventTime" placeholder="Date">
   <button type="submit" class="btn btn-outline-primary">Add</button>
 </form>
+<li class="nav-item">
+  <a class="nav-link disabled" href="maps">Map</a>
+</li>
 </div>

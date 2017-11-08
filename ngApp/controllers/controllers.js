@@ -34,3 +34,4 @@ app.controller('eventsController', ['$scope', '$resource',
       //
 
         }}]);
+        
